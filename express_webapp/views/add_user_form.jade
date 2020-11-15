@@ -1,0 +1,47 @@
+doctype html
+html
+    head
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        title Nouveau Compte
+    body
+        h1 Nouveau compte
+        form(action="", method="post")
+            div
+                label(for="lname") Nom
+                input(type="text", name="lname")
+            
+            div
+                label(for="fname") Prenom
+                input(type="text", name="fname")
+            
+            div
+                label(for="birth_date") Date de naissance
+                input(type="date", name="birth_date")
+
+            div
+                label(for="gender") Sexe
+                input(type="radio", name="gender", value="male", required)
+                label(for="male") Homme
+
+                input(type="radio", name="gender", value="female", required)
+                label(for="female") Femme
+
+            div
+                label(for="size") Taille
+                input(type="number", name="size", required)
+                label cm
+
+            div
+                label(for="weight") Poids
+                input(type="number", name="weight", required)
+                label kg
+
+            div
+                label(for="email") Adresse e-mail
+                input(type="email", name="email", required)
+
+            div
+                label(for="pswd") Mot de passe
+                input(type="password", name="pswd")
+
+            input(type="submit", value="Valider")

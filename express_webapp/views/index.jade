@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1 Bienvenue sur Sport Track
+    h2 L'application de suivi d'activités
+
+    if user
+        p Bonjour #{user.firstName}
+
+    if !user
+        p
+            a(href="/connect") Se connecter
+
+    if user
+        p
+                a(href="/activities") Activités enregistrées
+        p
+            a(href="/upload") Enregistrer une activité
+        p
+            a(href="/disconnect") Se déconnecter

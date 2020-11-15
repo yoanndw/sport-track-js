@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        title Activités
+    body
+        h1 Activités enregistrées
+        
+        table(border='1')
+            thead
+                tr
+                    th Date
+                    th Description
+                    th Distance (en km)
+                    th Durée (heures:minutes:secondes)
+            tbody
+                each act in activities
+                    tr
+                        td= act.actDate
+                        td= act.description
+                        td= act.distanceTot
+                        td= act.dureeTot
+        
+        p
+            a(href="/") Retour
